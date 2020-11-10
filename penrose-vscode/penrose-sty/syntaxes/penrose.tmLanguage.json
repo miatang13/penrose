@@ -1,0 +1,50 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Penrose Style",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.penrose",
+          "match": "\\b(if|while|for|return)\\b"
+        },
+        {
+          "name": "keyword.control.penrose",
+          "match": "\\b(forall|where)\\b"
+        },
+        {
+          "name": "support.function.penrose",
+          "match": "\\b(ensure|encourage|layer|override|delete)\\b"
+        },
+        {
+          "name": "constant.language.penrose",
+          "match": "\\b(LOCAL)\\b"
+        },
+        {
+          "name": "support.type.penrose",
+          "match": "\\b(rgba|vec2|vec3)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.penrose",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.penrose",
+          "match": "\\\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "source.sty"
+}

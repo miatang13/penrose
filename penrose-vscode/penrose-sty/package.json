@@ -1,0 +1,25 @@
+{
+    "name": "penrose-sty",
+    "displayName": "penrose-sty",
+    "description": "Penrose style language support",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.51.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "penrose",
+            "aliases": ["Penrose Style", "penrose"],
+            "extensions": [".sty"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "penrose",
+            "scopeName": "source.sty",
+            "path": "./syntaxes/penrose.tmLanguage.json"
+        }]
+    }
+}
