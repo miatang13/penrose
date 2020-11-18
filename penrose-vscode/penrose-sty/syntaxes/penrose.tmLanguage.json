@@ -1,12 +1,17 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "Penrose Style",
+  "fileTypes": ["sty"],
   "patterns": [
+    { "include": "#blocks" },
     {
       "include": "#keywords"
     },
     {
       "include": "#strings"
+    },
+    {
+      "include": "#numbers"
     }
   ],
   "repository": {
@@ -14,14 +19,10 @@
       "patterns": [
         {
           "name": "keyword.control.penrose",
-          "match": "\\b(if|while|for|return)\\b"
+          "match": "\\b(forall|where|with)\\b"
         },
         {
-          "name": "keyword.control.penrose",
-          "match": "\\b(forall|where)\\b"
-        },
-        {
-          "name": "support.function.penrose",
+          "name": "support.function",
           "match": "\\b(ensure|encourage|layer|override|delete)\\b"
         },
         {
@@ -30,7 +31,7 @@
         },
         {
           "name": "support.type.penrose",
-          "match": "\\b(rgba|vec2|vec3)\\b"
+          "match": "\\b(rgba|hsva|vec2|vec3)\\b"
         }
       ]
     },
@@ -44,6 +45,25 @@
           "match": "\\\\."
         }
       ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.penrose.int.signed",
+          "match": "[-+]\\d+"
+        },
+        {
+          "name": "constant.numeric.penrose.float",
+          "match": "[-+]?[0-9]*\\.?[0-9]+(E[-+]?[0-9]+)?"
+        },
+        {
+          "name": "constant.numeric.penrose.hole",
+          "match": "\\?"
+        }
+      ]
+    },
+    "blocks": {
+      "name": "meta.structure.block.penrose"
     }
   },
   "scopeName": "source.sty"
